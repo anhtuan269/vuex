@@ -1,17 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <hr />
+    <h1>Vuex section</h1>
+
+    <Result />
+    <br />
+    <other-result />
+
+    <Counter @updated="result += $event" />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Counter from "./components/counter.vue";
+import Result from "./components/result.vue";
+import otherResult from "./components/2nd_result.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Counter,
+    Result,
+    otherResult
+  },
+};
 </script>
 
 <style>
